@@ -123,20 +123,28 @@ public class Ecommerce {
             Ecommerce.total = 0;
         }
          // Cek apakah pembeli ingin lanjut belanja atau tidak👇
-        System.out.print("\nAPAKAH ANDA INGIN MELANJUTKAN BELANJA (Y/N)? ");
-        String lanjut = scanner_cash.nextLine();
-        switch(lanjut){
-            case "N":
-                print("\n");
-                garis();
-                print("TERIMA KASIH SUDAH BERBELANJA DI TOKO KAMI");
-                Ecommerce.is_resume = 0;
-                break;
-            case "Y":
-                print("SILAHKAN MELANJUTKAN BELANJA NYA ");
-            default :
-                print("PERINTAH TIDAK DIKETAHUI");
+        System.out.print("\nAPAKAH ANDA INGIN MELANJUTKAN BELANJA (1:Iya/0:Tidak)? ");
+        int lanjut = scanner_cash.nextInt();
+        if(lanjut == 0){
+            print("\n");
+            garis();
+            print("TERIMA KASIH SUDAH BERBELANJA DI TOKO KAMI");
+            Ecommerce.is_resume = 0;
+        }else if(lanjut == 1){
+            print("SILAHKAN MELANJUTKAN BELANJA NYA ");
         }
+        // switch(lanjut){
+        //     case 0:
+        //         print("\n");
+        //         garis();
+        //         print("TERIMA KASIH SUDAH BERBELANJA DI TOKO KAMI");
+        //         Ecommerce.is_resume = 0;
+        //         break;
+        //     case 1:
+        //         print("SILAHKAN MELANJUTKAN BELANJA NYA ");
+        //     default :
+        //         print("PERINTAH TIDAK DIKETAHUI");
+        // }
     }
 
 }
